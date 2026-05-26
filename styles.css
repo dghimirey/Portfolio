@@ -7,7 +7,6 @@
     --accent: #00d9ff;
     --accent-hover: #00b8db;
     --border: #2a2a2a;
-    --shadow: rgba(0, 217, 255, 0.1);
 }
 
 /* Reset & Base */
@@ -78,7 +77,6 @@ body {
     color: var(--text-secondary);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
 }
 
 .nav-link:hover {
@@ -92,7 +90,7 @@ body {
     align-items: center;
     justify-content: center;
     padding-top: 80px;
-    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    background: var(--bg-primary);
 }
 
 .hero-content {
@@ -110,10 +108,7 @@ body {
     font-size: clamp(3rem, 8vw, 6rem);
     font-weight: 800;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
 }
 
 .hero-tagline {
@@ -144,7 +139,6 @@ body {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
     display: inline-block;
 }
 
@@ -155,7 +149,6 @@ body {
 
 .btn-primary:hover {
     background: var(--accent-hover);
-    transform: translateY(-2px);
 }
 
 .btn-outline {
@@ -167,7 +160,6 @@ body {
 .btn-outline:hover {
     background: var(--accent);
     color: var(--bg-primary);
-    transform: translateY(-2px);
 }
 
 /* Sections */
@@ -191,7 +183,6 @@ body {
     width: 80px;
     height: 3px;
     background: var(--accent);
-    border-radius: 2px;
 }
 
 .bg-light {
@@ -253,12 +244,6 @@ body {
     border: 1px solid var(--border);
     border-radius: 15px;
     padding: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
 }
 
 .skill-card h3 {
@@ -284,12 +269,6 @@ body {
     border: 1px solid var(--border);
     border-radius: 15px;
     padding: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
 }
 
 .project-category {
@@ -319,12 +298,10 @@ body {
     color: var(--accent);
     text-decoration: none;
     font-weight: 600;
-    transition: margin 0.3s ease;
 }
 
 .btn-text:hover {
     color: var(--accent-hover);
-    margin-left: 5px;
 }
 
 /* Contact Section */
@@ -360,7 +337,6 @@ body {
     text-decoration: none;
     margin-bottom: 2rem;
     font-weight: 600;
-    transition: color 0.3s ease;
 }
 
 .email-link:hover {
