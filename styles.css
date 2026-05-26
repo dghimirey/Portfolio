@@ -9,7 +9,6 @@
     --border: #2a2a2a;
 }
 
-/* Reset & Base */
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +32,7 @@ body {
     padding: 0 2rem;
 }
 
-/* Header & Navigation */
+/* Header */
 .header {
     position: fixed;
     top: 0;
@@ -81,6 +80,16 @@ body {
 
 .nav-link:hover {
     color: var(--accent);
+}
+
+/* Mobile Menu */
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* Hero Section */
@@ -190,12 +199,6 @@ body {
 }
 
 /* About Section */
-.about-grid {
-    display: grid;
-    gap: 3rem;
-    align-items: center;
-}
-
 .about-text p {
     font-size: 1.1rem;
     color: var(--text-secondary);
@@ -235,7 +238,7 @@ body {
 /* Skills Section */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -316,7 +319,7 @@ body {
 }
 
 .contact-box {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 3rem;
@@ -367,18 +370,65 @@ body {
     margin-bottom: 0.3rem;
 }
 
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--accent);
+    color: var(--bg-primary);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+    border: none;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: var(--accent-hover);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .mobile-toggle {
+        display: block;
+    }
+
     .nav-container {
-        flex-direction: column;
-        gap: 1rem;
         padding: 1rem;
+    }
+
+    .nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background: var(--bg-secondary);
+        border-bottom: 1px solid var(--border);
+        transition: left 0.3s ease;
+        padding: 2rem;
+    }
+
+    .nav.active {
+        left: 0;
     }
 
     .nav-list {
         flex-direction: column;
         gap: 1rem;
-        text-align: center;
     }
 
     .hero-title {
